@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+        integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotstar</title>
+    <style>* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        /* display: flex; */
+    }
+
+    .navbar {
+        max-width: 10vw;
+        height: 100vh;
+        /* background-color: black; */
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* border-right: 2px solid white; */
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        z-index: 70;
+        background: linear-gradient(to right #000000,#000000,#000000,#000000,#000000);
+    }
+
+    .logo {
+        width: 50px;
+         /* margin-bottom: 130px; */
+         position: fixed;
+         top: 30px;
+         left: 0;
+    } 
+    .logo2{
+        width: 25px;
+        margin-top: 30px; 
+    }
+
+    .icons {
+        margin-top: 10px;
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0.733);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 30px;
+        background: linear-gradient(to right transparent,#000000,#000000,#000000);
+    }
+    .home{
+        color: white;
+    }
+    .icons i,.p-tag{
+        cursor: pointer;
+    }
+ .p-tag{
+    opacity: 0;
+    transition: 0.4s all ease;
+    margin-left: 5px;z-index: 20;
+     }
+     .icons:hover{
+        .p-tag{
+            opacity: 1;
+            /* background: linear-gradient(to right #000000,#000000,#000000,#000000,#000000,transparent);
+             */
+        }
+        .nav{
+            background: linear-gradient(to right,#000000,#000000,#000000,#000000,transparent);
+        }
+    
+     }  .mainsection {
+            width: 100vw;
+            min-height: 100vh;
+            background-color: black;
+            float: right;
+        }
+
+        .section1 {
+            width: 90%;
+            /* height: 300px; */
+            background-color: black;
+            margin: auto;
+            border-radius: 10px;
+            margin-top: 10px;
+            /* background-image: url(upperimg1.png); */
+            display: flex;
+
+        }
+
+        .sec1-2 {
+            margin-left: 20px;
+            margin-top: 10px;
+            background: linear-gradient(to leftt transparent,#000000,#000000,#000000,#000000,#000000);
+        }
+
+        .upper {
+            width: 50%;
+            opacity: 0.8;
+
+        }
+
+        .sec1matter {
+            display: flex;
+            /* margin: 20px; */
+        }
+
+        .jio {
+            width: 50px;
+            height: 40px;
+            margin-right: 10px;
+        }.Dare {
+            color: white;
+        }
+
+        .streaming {
+            color: darkgray;
+
+        }
+
+        .sub {
+            margin-top: 20px;
+            color: white;
+            margin-bottom: 60px;
+        }
+        .trailer{
+            color: white;
+            border: 1px solid whitesmoke;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 800;
+            border-radius: 15px;
+            outline: none;
+            border: none;
+            background-color: rgba(211, 211, 211, 0.427);
+
+           
+        }
+
+        .section2 {
+            width: 90%;
+            margin: 10px auto;
+
+        }
+
+        .bg-img {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            opacity: 0.6;
+            /* background: linear-gradient(to right, #000000, #000000, transparent); */
+        }
+
+        .section2-main {
+            position: relative;
+            bottom: 200px;
+            /* left: 10px; */
+            background: linear-gradient(to bottom, transparent, #000000, #000000, #000000);
+        }
+
+        .section2-1 {
+            width: 40%;
+            /* background-color: red; */
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* position: relative;
+            bottom: 330px;
+            left: 8px; */
+        }
+
+        .sukhmaheading {
+            width: 100%;
+        }
+
+        .UA {
+            color: white;
+            border: 1px solid whitesmoke;
+            padding: 9px;
+            font-size: 10px;
+            font-weight: 800;
+            border-radius: 25px;
+            outline: none;
+            border: none;
+            background-color: rgba(211, 211, 211, 0.427);
+
+        }
+
+        .matter {
+            display: flex;
+          gap: 15px;
+          font-size: 18px;
+          justify-content: center;
+          align-items: center;
+
+        }
+       .dot{
+        color: white;
+       }
+
+        .para {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .watchnow {
+            margin-top: 10px;
+            width: 350px;
+            height: 100px;
+            height: auto;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            /* outline: none; */
+            border-radius: 6px;
+            background: #009FFF;
+            background: -webkit-linear-gradient(to left, rgb(224, 6, 42), #009FFF);
+            background: linear-gradient(to left, rgb(224, 6, 42), #009FFF);
+        }
+
+        .watchnow:hover {
+            cursor: pointer;
+            scale: 1.1;
+            transition: 0.3s all ease;
+        }
+
+        .section2-2 {
+            width: 100%;
+            /* height: 500px; */
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            overflow: scroll;
+            /* margin: 10px 10px; */
+            scrollbar-width: none;
+            /* padding: 20px; */
+            /* margin: auto; */
+            /* position: relative; */
+        }
+
+        .white {
+            margin-top: 10px;
+
+            color: white;
+        }.white::marker {
+            color: gray;
+        }
+
+        .type {
+            margin-bottom: 10px;
+        }
+
+        .box {
+            min-width: 180px;
+            margin: 10px 20px;
+            /* margin: auto; */
+            position: relative;
+        }
+
+        .box img {
+            width: 100%;
+            border-radius: 8px;
+
+        }
+
+        .box:hover {
+            cursor: pointer;
+            scale: 1.2;
+            transition: 0.4s all ease;
+        }
+
+        .box1::after {
+            content: '1';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box2::after {
+            content: '2';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box3::after {
+            content: '3';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box4::after {
+            content: '4';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box5::after {
+            content: '5';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box6::after {
+            content: '6';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box7::after {
+            content: '7';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box8::after {
+            content: '8';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box9::after {
+            content: '9';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+
+        .box10::after {
+            content: '10';
+            font-size: 100px;
+            font-weight: 880;
+            color: white;
+            position: absolute;
+            left: -20px;
+            bottom: 20px;
+            z-index: 10;
+
+        }
+        .heading {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- navbar -->
+        <nav class="navbar">
+            <img src="logo.png" alt="" class="logo">
+            <div class="icons">
+               <div class="sub-icon  home"> <i class="fa-solid fa-house"></i>
+            <span class="p-tag">Home</span></div>
+               <div class="sub-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span class="p-tag">Search</span>
+               </div>
+                <div class="sub-icon">
+                    <i class="fa-solid fa-tv"></i>
+                <span class="p-tag">TV</span>
+                </div>
+                <div class="sub-icon">
+                    <i class="fa-solid fa-film"></i>
+                <span class="p-tag ">Movies </span>
+                </div>
+               <div class="sub-icon">
+                <i class="fa-solid fa-person-running"></i>
+                <span class="p-tag">Sports</span>
+               </div>
+               <div class="sub-icon">
+                <i class="fa-regular fa-video"></i>
+                <span class="p-tag">Sparks</span>
+               </div>
+               <div class="sub-icon">
+                <i class="fa-solid fa-table"></i>
+                <span class="p-tag">Categories</span>
+                <div class="sub-icon ">
+                    <img src="myspace.png" alt="" class="logo2">
+                    <span class="p-tag my">My Space</span>
+        
+                   </div>
+               </div>
+            </div>
+          
+        </nav>
+
+        <div class="mainsection">
+            <!-- section1 -->
+
+            <div class="section1">
+                <img src="daredevil.jpg" alt="" class="upper">
+                <div class="sec1-2">
+                    <div class="sec1matter">
+                        <img src="jio.hotstar.jpg" alt="" class="jio">
+                        <div class="right">
+                            <p class="Dare">Daredevil</p>
+                            <p class="streaming">streaming from march 5th</p>
+                        </div>
+                    </div>
+                    <div class="sub">
+                        <p>Daredevil's secret life is on the line in this gripping</p>
+                        <p>Superhero drama!</p>
+                    </div>
+                    <span class="trailer white">
+                             Trailer
+                    </span>
+                </div>
+
+            </div>
+            <!-- section2 -->
+            <div class="section2">
+                <img src="match.jpg" alt="" class="bg-img">
+                <div class="section2-main">
+                    <div class="section2-1">
+                        <img src="cri.avif" alt="" class="sukhmaheading">
+                        <div class="matter">
+                            <div class="number white ">2024</div>
+                            <div class="dot">&#x2022; </div>
+                            <div class="UA white "> U/A 16+</div><div class="dot">&#x2022;</div>
+                            <div class="white "> 2h 20m </div>
+                            <div class="dot">&#x2022;</div>
+                            <div class="white">5 Languages </div>
+                        </div>
+                        <p class="white para">Manuel's return to the neighbourhood prompts a home maker Priyadarshini to
+                            be
+                            cautious.Eventually she realized that there's far more to him than meets the eye</p>
+
+                        <h3 class="white type">Thriller | Drama | Suspense | Curious</h3>
+
+                        <input type="button" value="&#9654;  Watch now" class="watchnow">
+
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">Top 10 in India Telugu-Today</h2>
+                        <div class="section2-2">
+
+                            <div class="box box1">
+                                <img src="t.jpg" alt="">
+                            </div>
+                            <div class="box box2">
+                                <img src="t1.jpg" alt="">
+                            </div>
+                            <div class="box box3">
+                                <img src="t2.jpg" alt="">
+                            </div>
+                            <div class="box box4">
+                                <img src="t3.jpg" alt="">
+                            </div>
+                            <div class="box box5">
+                                <img src="t4.jpg" alt="">
+                            </div>
+                            <div class="box box6">
+                                <img src="t5.jpg" alt="">
+                            </div>
+                            <div class="box box7">
+                                <img src="t.jpg" alt="">
+                            </div>
+                            <div class="box box8">
+                                <img src="t1.jpg" alt="">
+                            </div>
+                            <div class="box box9">
+                                <img src="t8.avif" alt="">
+                            </div>
+                            <div class="box box10">
+                                <img src="" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">Latest Releases</h2>
+                        <div class="section2-2">
+
+                            <div class="box">
+                                <img src="l.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l1.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l3.avif" alt="">
+                            </div>
+                            <div class="box">                                <img src="l8.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l4.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l2.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l5.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="t6.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l6.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="l7.avif" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="heading">
+                        <h2 class="white">Watch List</h2>
+                        <div class="section2-2">
+
+                            <div class="box">
+                                <img src="w.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w2.avif" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w3.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w4.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w5.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w6.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w7.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w8.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w9.webp" alt="">
+                            </div>
+                            <div class="box">
+                                <img src="w10.avif" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
+
+
